@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Button, Form, Grid, Modal } from 'semantic-ui-react';
+import { Button, Divider, Form, Grid, Segment, Modal } from 'semantic-ui-react';
 import { StoreContext } from '../Data/Store';
 
 function Login(props) {
@@ -32,7 +32,6 @@ function checkLogin(emailLogin, senhaLogin) {
  email === emailLogin && senha === senhaLogin)
  return !result
 }
-
 
 
 return(
