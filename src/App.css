@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+body {
+  background: linear-gradient(to bottom, #edf7f8 0%, #020202 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;  
+  width:100%;  
+  margin-left:10%;
+  padding: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  display: flex;
+  background: linear-gradient(to bottom left, #08d4e2 0%, #630ec5 100%);
+  border-radius: 100px 100px 100px 100px;
+}
+
+.select {
+  cursor: pointer;
+  word-wrap: break-word;
+  line-height: 1em;
+  white-space: normal;
+  outline: 0;
+  transform: rotateZ(0);
+  min-width: 14em;
+  min-height: 2.71428571em;
+  background: #fff;
+  display: inline-block;
+  padding: 9px 14px 9px 37px;
+  color: rgba(0,0,0,.87);
+  box-shadow: none;
+  border: 1px solid rgba(34,36,38,.15);
+  border-radius: .28571429rem;
+  transition: box-shadow .1s;
+  margin-top: 5px;
+  /* height: 50px; */
+
+}
+
+.label {
+  display: block;
+  /* margin: 0 0 .28571429rem 0; */
+  color: rgba(0,0,0,.87);
+  font-size: .92857143em;
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+.btn {
+  align-self: center;
+  width: 100%;
+}
+
+@media screen and ( max-width : 360px ) {
+  .box, .container {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.teste {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20%;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnIns {
+  width: 14vw;
+  margin: 20px;
+  padding: 20px;
 }
