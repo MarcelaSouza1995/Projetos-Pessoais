@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Button, Divider, Form, Grid, Segment, Modal } from 'semantic-ui-react';
+import { Button, Form, Grid, Modal } from 'semantic-ui-react';
 import { StoreContext } from '../Data/Store';
 
 function Login(props) {

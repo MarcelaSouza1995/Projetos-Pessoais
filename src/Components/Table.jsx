@@ -1,10 +1,21 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { Table, Button, Icon } from 'semantic-ui-react'
 import { StoreContext } from '../Data/Store';
 
 
 const TabelaGastos = () => {
   const { expenses, setExpenses } = useContext(StoreContext);
+  const [editExpense, setEditExpense] = useState({})
+
+  function deleteExpense(id) {
+   const newExpenses = expenses.filter((e) => e.id !== id );
+   setExpenses(newExpenses)
+  }
+
+  function upgradeExpense(expense) {
+    setEditExpense(expense)
+  }
+  
 
   return (
   <Table celled selectable>
@@ -30,11 +41,11 @@ const TabelaGastos = () => {
         <Table.Cell>{e.categoria}</Table.Cell>
         <Table.Cell>{`R$ ${e.valor * e.quantidade}.00`}</Table.Cell>
         <Table.Cell>
-          <Button>
+          <Button onClick={ () => deleteExpense(e.id) }>
           <Icon name='trash alternate outline' />
 
           </Button>
-          <Button>
+          <Button onClick={ () => upgradeExpense(e) }>
             <Icon name='edit' />
           </Button></Table.Cell>
         </Table.Row>
