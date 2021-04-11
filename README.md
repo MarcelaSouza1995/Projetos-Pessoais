@@ -13,9 +13,8 @@ Projeto desenvolvido com base em uma aplicação Trybe Wallet [Projeto Trybe Wal
   * Instale as dependências:
     * `npm install`
   * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes estão executando:
-    * `npm test` (os testes devem rodar e falhar)
+    * `npm start` (uma nova página deve abrir no seu navegador)
+
 
 ## Tecnólogias utilizadas
 
