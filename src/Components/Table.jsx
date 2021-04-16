@@ -1,21 +1,15 @@
 import React, {useContext, useState} from 'react'
 import { Table, Button, Icon } from 'semantic-ui-react'
 import { StoreContext } from '../Data/Store';
-
+import ModalEdicao from '../Components/ModalEdicao';
 
 const TabelaGastos = () => {
   const { expenses, setExpenses } = useContext(StoreContext);
-  const [editExpense, setEditExpense] = useState({})
 
   function deleteExpense(id) {
    const newExpenses = expenses.filter((e) => e.id !== id );
    setExpenses(newExpenses)
   }
-
-  function upgradeExpense(expense) {
-    setEditExpense(expense)
-  }
-  
 
   return (
   <Table celled selectable>
@@ -43,11 +37,9 @@ const TabelaGastos = () => {
         <Table.Cell>
           <Button onClick={ () => deleteExpense(e.id) }>
           <Icon name='trash alternate outline' />
-
           </Button>
-          <Button onClick={ () => upgradeExpense(e) }>
-            <Icon name='edit' />
-          </Button></Table.Cell>
+          <ModalEdicao element={ e } />
+          </Table.Cell>
         </Table.Row>
       )}
       

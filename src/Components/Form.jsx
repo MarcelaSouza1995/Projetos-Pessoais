@@ -5,18 +5,18 @@ import { StoreContext } from '../Data/Store';
 
 const FormGastos = () => {
 
-  const { expenses, setExpenses } = useContext(StoreContext)
-  const [inputValue, setInputValue] = useState({id:0,})
+  const { expenses, setExpenses } = useContext(StoreContext);
+  const [inputValue, setInputValue] = useState({id:0,});
 
   function handleChange({target:{name, value}}) {
-    setInputValue({...inputValue, [name]: value})
+    setInputValue({...inputValue, [name]: value});
   }
 
   function handleClick() {
       setInputValue((estadoAnterior) => ({...inputValue,
       id: estadoAnterior.id + 1,
     }));
-    setExpenses([...expenses, inputValue])
+    setExpenses([...expenses, inputValue]);
   }
 
   return(
