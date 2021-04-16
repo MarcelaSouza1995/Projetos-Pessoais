@@ -1,5 +1,7 @@
-body {
-  background: linear-gradient(to bottom, #edf7f8 0%, #020202 100%);
+.body {
+
+  background-color: rgb(187, 189, 246);
+
 }
 
 .box {
@@ -13,8 +15,8 @@ body {
 
 .container {
   display: flex;
-  background: linear-gradient(to bottom left, #08d4e2 0%, #630ec5 100%);
-  border-radius: 100px 100px 100px 100px;
+  background: linear-gradient(to bottom left, rgb(152, 147, 218, 0), rgb(121, 122, 158, 100));
+  /*border-radius: 100px; */
 }
 
 .select {
@@ -54,9 +56,14 @@ body {
   width: 100%;
 }
 
-@media screen and ( max-width : 360px ) {
+@media screen and ( max-width : 800px ) {
   .box, .container {
-    width: 100%;
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0;
+    
   }
 }
 
