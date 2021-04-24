@@ -1,22 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .body {
+  background: linear-gradient(90deg, #BBBDF6, #9893DA, #797A9E, #72727E, #625F63);
+  background-size: 400% 400%;
+  animation: colors 15s ease infinite;
+}
 
-  background-color: rgb(187, 189, 246);
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100%  {
+    background-position: 0% 50%;
+  }
 }
 
 .box {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;  
   width:100%;  
-  margin-left:10%;
-  padding: 2%;
+  padding-top: 2%;
 }
 
 .container {
   display: flex;
-  background: linear-gradient(to bottom left, rgb(152, 147, 218, 0), rgb(121, 122, 158, 100));
-  /*border-radius: 100px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
 }
 
 .select {
@@ -37,13 +61,10 @@
   border-radius: .28571429rem;
   transition: box-shadow .1s;
   margin-top: 5px;
-  /* height: 50px; */
-
 }
 
 .label {
   display: block;
-  /* margin: 0 0 .28571429rem 0; */
   color: rgba(0,0,0,.87);
   font-size: .92857143em;
   font-weight: 700;
@@ -53,17 +74,22 @@
 
 .btn {
   align-self: center;
-  width: 100%;
+  
 }
 
-@media screen and ( max-width : 800px ) {
+@media screen and ( max-width : 360px ) {
   .box, .container {
     
       display: flex;
       flex-direction: column;
       align-items: center;
       border-radius: 0;
+      width: auto;
     
+  }
+
+  .input-form {
+    width: 100%;
   }
 }
 
@@ -80,4 +106,71 @@
   width: 14vw;
   margin: 20px;
   padding: 20px;
+}
+
+.title-header {
+  font-family: 'Merriweather', serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1em 0.1em #333;
+  font-size: 30px;
+  margin-left: 38%;
+}
+
+
+.saldo-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+  font-family: 'Merriweather', serif;
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zoom {
+  overflow: hidden;
+}
+.zoom .saldo-total {
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.zoom:hover .saldo-total {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.footer {
+  position: absolute;
+	bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+.links {
+  margin: 15px;
+  font-size:large;
+  padding: 10px;
+  color: black;
+  font-family: 'Merriweather', serif;
+
+}
+
+span {
+  font-family: 'Merriweather', serif;
+
 }

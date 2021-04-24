@@ -29,9 +29,16 @@ function ModalEdicao({ element }) {
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
       open={open}
-      trigger={<Button onClick={ ()=> editExpense(element)}><Icon name='edit' /></Button>}
+      trigger={
+      <Button animated='vertical' onClick={ ()=> editExpense(element)} color='green'>
+      <Button.Content hidden>Editar</Button.Content>
+      <Button.Content visible>
+      <Icon name='edit' color='black'/>
+      </Button.Content>
+    </Button>
+    }
+      style={{width:'30%'}}
     >
-      <Modal.Header>Editar</Modal.Header>
       <Modal.Content image>
         <Modal.Description>
           <Grid.Column>
@@ -96,16 +103,19 @@ function ModalEdicao({ element }) {
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button color='black' onClick={() => setOpen(false)}>
-          SAIR
-        </Button>
-        <Button
-          content='EDITAR'
-          labelPosition='right'
-          icon='edit'
-          positive
-          onClick={ ()=> addExpense(element) }
-        />
+      <div className="container">
+        <Button.Group>
+          <Button onClick={() => setOpen(false)}>SAIR</Button>
+          <Button.Or />
+          <Button positive  
+                content='EDITAR'
+                labelPosition='right'
+                icon='edit'
+                positive
+                onClick={ ()=> addExpense(element) }/>
+        </Button.Group>
+      </div>
+
       </Modal.Actions>
     </Modal>
   )
