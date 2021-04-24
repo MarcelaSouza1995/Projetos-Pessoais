@@ -5,8 +5,9 @@
   padding: 0;
 }
 
+
 .body {
-  background: linear-gradient(90deg, #BBBDF6, #9893DA, #797A9E, #72727E, #625F63);
+  background: linear-gradient(45deg, #BBBDF6, #9893DA, #797A9E, #72727E, #625F63);
   background-size: 400% 400%;
   animation: colors 15s ease infinite;
 }
@@ -29,6 +30,13 @@
   display: flex;
   width:100%;  
   padding-top: 2%;
+}
+
+.centralizar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10em;
 }
 
 .container {
@@ -93,19 +101,25 @@
   }
 }
 
-.teste {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
-  
+  border: 0px groove #666666;
+  border-radius: 100px 0px 100px 0px;
+  background-color: rgba(0,0,0,0.5);
+  width: 20em;
+  height: 28em;
 }
 
-.btnIns {
-  width: 14vw;
-  margin: 20px;
-  padding: 20px;
+.link-inscricao {
+  margin: 5%;
+  font-size: medium;
+}
+
+.btn-login {
+  width: 100%;
 }
 
 .title-header {
@@ -117,6 +131,15 @@
   margin-left: 38%;
 }
 
+.title-login {
+  font-family: 'Merriweather', serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1em 0.1em #333;
+  font-size: 1.5em;
+  margin-bottom: 15%;
+}
+
 
 .saldo-total {
   display: flex;
@@ -125,7 +148,8 @@
   width: 200px;
   padding: 10px;
   font-family: 'Merriweather', serif;
-
+  color: white;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .header {
@@ -151,7 +175,7 @@
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
 	bottom: 0;
   display: flex;
   flex-direction: column;
@@ -163,14 +187,58 @@
 
 .links {
   margin: 15px;
-  font-size:large;
+  font-size: medium;
   padding: 10px;
-  color: black;
+  color: white;
   font-family: 'Merriweather', serif;
-
 }
 
 span {
   font-family: 'Merriweather', serif;
+  color: white;
+}
 
+
+label {
+letter-spacing: 0.1rem;
+
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulse {
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  display: table;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
 }

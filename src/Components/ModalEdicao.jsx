@@ -111,7 +111,6 @@ function ModalEdicao({ element }) {
                 content='EDITAR'
                 labelPosition='right'
                 icon='edit'
-                positive
                 onClick={ ()=> addExpense(element) }/>
         </Button.Group>
       </div>

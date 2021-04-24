@@ -16,26 +16,26 @@ const TabelaGastos = () => {
       <Table celled selectable style={{width: '89%',}}>
         <Table.Header >
           <Table.Row>
-            <Table.HeaderCell>Valor</Table.HeaderCell>
-            <Table.HeaderCell>Quantidade</Table.HeaderCell>
-            <Table.HeaderCell>Descrição</Table.HeaderCell>
-            <Table.HeaderCell>Tag</Table.HeaderCell>
-            <Table.HeaderCell>Categoria</Table.HeaderCell>
-            <Table.HeaderCell>Total</Table.HeaderCell>
-            <Table.HeaderCell>Excluir ou Editar</Table.HeaderCell>
-          </Table.Row>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Valor</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Quantidade</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Descrição</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Tag</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Categoria</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Total</Table.HeaderCell>
+            <Table.HeaderCell style={{ textAlign: 'center' }}>Excluir ou Editar</Table.HeaderCell>
+           </Table.Row>
         </Table.Header>
       
-        <Table.Body>
+        <Table.Body >
         {expenses.map((e) => 
-        <Table.Row>
-            <Table.Cell>{`R$ ${e.valor}.00`}</Table.Cell>
-            <Table.Cell>{e.quantidade}</Table.Cell>
-            <Table.Cell>{e.descricao}</Table.Cell>
-            <Table.Cell>{e.tag}</Table.Cell>
-            <Table.Cell>{e.categoria}</Table.Cell>
-            <Table.Cell>{`R$ ${e.valor * e.quantidade}.00`}</Table.Cell>
-            <Table.Cell>
+        <Table.Row>          
+            <Table.Cell style={{ textAlign: 'center' }}>{`R$ ${e.valor}.00`}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>{e.quantidade}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>{e.descricao}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>{e.tag}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>{e.categoria}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>{`R$ ${e.valor * e.quantidade}.00`}</Table.Cell>
+            <Table.Cell style={{ textAlign: 'center' }}>
             <Button animated='vertical' onClick={ () => deleteExpense(e.id) } color='red'>
               <Button.Content hidden color='black'>Apagar</Button.Content>
               <Button.Content visible>
